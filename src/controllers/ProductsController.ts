@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { AppError } from "../utils/AppError";
 
 class ProductsController {
   index(request: Request, response: Response) {
@@ -10,7 +11,9 @@ class ProductsController {
   create(request: Request, response: Response) {
     const { name, price } = request.body;
 
-    throw new Error("Erro ao tentar criar um produto!");
+    if (!name || !price) {
+      throw new AppError("Nome e preço do produto são obrigatórios!");
+    }
 
     response.status(201).json({ name, price, user_id: request.user_id });
   }
