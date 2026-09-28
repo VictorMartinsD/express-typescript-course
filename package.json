@@ -1,7 +1,7 @@
 {
-  "name": "express-typescript-course",
+  "name": "product-catalog-api",
   "version": "1.0.0",
-  "description": "Criando API REST com Node.js",
+  "description": "REST API for product catalog management built with Node.js, Express and TypeScript",
   "main": "src/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts"
