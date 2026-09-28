@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { AppError } from "../utils/app-error";
+import { z } from "zod";
 
 class ProductsController {
   index(request: Request, response: Response) {
@@ -9,23 +9,12 @@ class ProductsController {
   }
 
   create(request: Request, response: Response) {
-    const { name, price } = request.body;
+    const bodySchema = z.object({
+      name: z.string(),
+      price: z.number(),
+    });
 
-    if (!name) {
-      throw new AppError("Nome do produto é obrigatório!");
-    }
-
-    if (name.trim().length < 3) {
-      throw new AppError("Nome do produto deve ter pelo menos 3 caracteres!");
-    }
-
-    if (!price) {
-      throw new AppError("Preço do produto é obrigatório!");
-    }
-
-    if (price < 0) {
-      throw new AppError("Preço do produto não pode ser menor do que 0!");
-    }
+    const { name, price } = bodySchema.parse(request.body);
 
     response.status(201).json({ name, price, user_id: request.user_id });
   }
