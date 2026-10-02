@@ -97,26 +97,26 @@ O projeto usa uma organização modular por responsabilidade. O arquivo de inici
 
 ```text
 product-catalog-api/
-├── package.json                 # Metadados, dependências e script de desenvolvimento
-├── package-lock.json            # Versões resolvidas das dependências
-├── tsconfig.json                # Configuração do compilador TypeScript
-├── .gitignore                   # Arquivos locais e gerados ignorados pelo Git
+├── package.json                   # Metadados, dependências e script de desenvolvimento
+├── package-lock.json              # Versões resolvidas das dependências
+├── tsconfig.json                  # Configuração do compilador TypeScript
+├── .gitignore                     # Arquivos locais e gerados ignorados pelo Git
 ├── docs/
-│   ├── product-spec.md          # Visão funcional e regras de produto
-│   └── study-notes.md       # Registro técnico de aprendizado
+│   ├── product-spec.md            # Visão funcional e regras de produto
+│   └── study-notes.md             # Registro técnico de aprendizado
 └── src/
-    ├── server.ts                # Bootstrap do servidor e tratamento global de erros
+    ├── server.ts                  # Bootstrap do servidor e tratamento global de erros
     ├── controllers/
     │   └── products-controller.ts # Operações de consulta e criação de produtos
     ├── middleware/
-    │   └── my-middleware.ts     # Middleware de contexto da requisição
+    │   └── my-middleware.ts       # Middleware de contexto da requisição
     ├── routes/
-    │   ├── index.ts             # Composição do router principal
-    │   └── products-routes.ts   # Rotas do recurso de produtos
+    │   ├── index.ts               # Composição do router principal
+    │   └── products-routes.ts     # Rotas do recurso de produtos
     ├── types/
-    │   └── request.d.ts         # Extensão do tipo de requisição do Express
+    │   └── request.d.ts           # Extensão do tipo de requisição do Express
     └── utils/
-        └── app-error.ts         # Representação de erros da aplicação
+        └── app-error.ts           # Representação de erros da aplicação
 ```
 
 As principais decisões técnicas são:
@@ -185,7 +185,9 @@ Front-End Developer focado em aplicações web modernas e performance.
 
 <div align="center">
 <a name="english-version"></a>
+    
 ## ENGLISH VERSION
+
 </div>
 
 <a name="about-the-project"></a>
@@ -259,26 +261,26 @@ The project uses a responsibility-based modular organization. The entry point re
 
 ```text
 product-catalog-api/
-├── package.json                 # Metadata, dependencies, and development script
-├── package-lock.json            # Resolved dependency versions
-├── tsconfig.json                # TypeScript compiler configuration
-├── .gitignore                   # Local and generated files ignored by Git
+├── package.json                   # Metadata, dependencies, and development script
+├── package-lock.json              # Resolved dependency versions
+├── tsconfig.json                  # TypeScript compiler configuration
+├── .gitignore                     # Local and generated files ignored by Git
 ├── docs/
-│   ├── product-spec.md          # Product vision and business rules
-│   └── study-notes.md       # Technical learning record
+│   ├── product-spec.md            # Product vision and business rules
+│   └── study-notes.md             # Technical learning record
 └── src/
-    ├── server.ts                # Server bootstrap and global error handling
+    ├── server.ts                  # Server bootstrap and global error handling
     ├── controllers/
     │   └── products-controller.ts # Product query and creation operations
     ├── middleware/
-    │   └── my-middleware.ts     # Request context middleware
+    │   └── my-middleware.ts       # Request context middleware
     ├── routes/
-    │   ├── index.ts             # Main router composition
-    │   └── products-routes.ts   # Product resource routes
+    │   ├── index.ts               # Main router composition
+    │   └── products-routes.ts     # Product resource routes
     ├── types/
-    │   └── request.d.ts         # Express request type extension
+    │   └── request.d.ts           # Express request type extension
     └── utils/
-        └── app-error.ts         # Application error representation
+        └── app-error.ts           # Application error representation
 ```
 
 The main technical decisions are:
